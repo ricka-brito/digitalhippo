@@ -7,7 +7,7 @@ interface PageProps {
 
 const VerifyEmailPage = ({ searchParams }: PageProps) => {
   const token = searchParams.token;
-  const toEmail = searchParams.email;
+  const toEmail = searchParams.to;
 
   return (
     <div className="container relative pt-20 flex-col items-center justify-center lg:px-0">
@@ -27,7 +27,7 @@ const VerifyEmailPage = ({ searchParams }: PageProps) => {
             </div>
             <h3 className="font-semibold text-2xl">Check your email</h3>
             {toEmail ? (
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-center">
                 We&apos;ve sent a verification link to{" "}
                 <span className="font-semibold">{toEmail}</span>.
               </p>
